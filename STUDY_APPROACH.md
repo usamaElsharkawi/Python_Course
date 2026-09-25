@@ -40,9 +40,9 @@ Lecture → Split into N units → Discuss Unit 1 → Discuss Unit 2 → ... →
 | 2 | Typecasting in Python | `Typecasting.md` | ✅ Complete |
 | 3 | Taking User Input in Python | `Taking_User_Input.md` | ✅ Complete |
 | 4 | Comments, Escape Sequences & Print Statement | `Comments_Escape_Sequences.md` | ✅ Complete |
-| 5 | Operators in Python | TBD | 🔜 Upcoming |
-| 6 | Coding Exercise 2: Understanding Escape Sequence Characters | TBD | 🔜 Upcoming |
-| 7 | Practice Set 1 | TBD | 🔜 Upcoming |
+| 5 | Operators in Python | `Operators.md` | ✅ Complete |
+| 6 | Coding Exercise 2: Understanding Escape Sequence Characters | TBD | ✅ Complete |
+| 7 | Practice Set 1 | TBD | ✅ Complete |
 
 ## Completed: Lecture 1 — Variables and Data Types in Python
 
@@ -80,6 +80,24 @@ Lecture → Split into N units → Discuss Unit 1 → Discuss Unit 2 → ... →
 2. Escape Sequences — `\n`, `\t`, `\\`, `\"`, `\'`
 3. Print Statement — `sep` and `end` parameters
 
+## Completed: Lecture 5 — Operators in Python
+
+**File**: `02:Python fundamentals/Operators.md`
+
+**Units covered**:
+1. Arithmetic Operators — `+`, `-`, `*`, `/`, `//`, `%`, `**`
+2. Comparison Operators — `>`, `<`, `>=`, `<=`, `==`, `!=`
+3. Logical Operators — `and`, `or`, `not`
+4. Assignment Operators — `=`, `+=`, `-=`, `*=`, `/=`, `%=`, `**=`, `//=`
+
+## Completed: Lecture 6 — Coding Exercise 2
+
+**Attended** — no transcript provided.
+
+## Completed: Lecture 7 — Practice Set 1
+
+**Attended** — no transcript provided.
+
 ---
 
-*Next: Lecture 5 — Operators in Python*
+*All 7 lectures complete!*
