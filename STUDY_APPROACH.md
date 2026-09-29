@@ -32,17 +32,31 @@ Lecture → Split into N units → Discuss Unit 1 → Discuss Unit 2 → ... →
                                                    Create lecture .md file
 ```
 
-## Lecture Schedule
+## Section Schedule
 
-| # | Lecture | File | Status |
-|---|---------|------|--------|
-| 1 | Variables and Data Types in Python | `Variables_and_Data_Types.md` | ✅ Complete |
-| 2 | Typecasting in Python | `Typecasting.md` | ✅ Complete |
-| 3 | Taking User Input in Python | `Taking_User_Input.md` | ✅ Complete |
-| 4 | Comments, Escape Sequences & Print Statement | `Comments_Escape_Sequences.md` | ✅ Complete |
-| 5 | Operators in Python | `Operators.md` | ✅ Complete |
-| 6 | Coding Exercise 2: Understanding Escape Sequence Characters | TBD | ✅ Complete |
-| 7 | Practice Set 1 | TBD | ✅ Complete |
+### Section 2: Python Fundamentals — ✅ Complete (7 lectures)
+
+| # | Lecture | File |
+|---|---------|------|
+| 1 | Variables and Data Types in Python | `02:Python fundamentals/Variables_and_Data_Types.md` |
+| 2 | Typecasting in Python | `02:Python fundamentals/Typecasting.md` |
+| 3 | Taking User Input in Python | `02:Python fundamentals/Taking_User_Input.md` |
+| 4 | Comments, Escape Sequences & Print Statement | `02:Python fundamentals/Comments_Escape_Sequences.md` |
+| 5 | Operators in Python | `02:Python fundamentals/Operators.md` |
+| 6 | Coding Exercise 2 | attended |
+| 7 | Practice Set 1 | attended |
+
+### Section 3: Control Flow and Loops — 🔜 In Progress (7 lectures, 1hr 2min)
+
+| # | Lecture | Duration | Status |
+|---|---------|----------|--------|
+| 13 | If-Else Conditional Statements | `03:Control Flow and Loops/If_Else_Conditionals.md` | ✅ Complete (3/3 units) |
+| 14 | Match Case Statements in Python | 4min | 🟡 Unit 1/3 Complete |
+| 15 | For Loops in Python | 8min | ⬜ Upcoming |
+| 16 | While Loops in Python | 7min | ⬜ Upcoming |
+| 17 | Break, Continue, and Pass Statements | 9min | ⬜ Upcoming |
+| — | Coding Exercise 3: Printing the table of 56 | — | ⬜ Upcoming |
+| 18 | Control Flow and Loops — Practice Set | 23min | ⬜ Upcoming |
 
 ## Completed: Lecture 1 — Variables and Data Types in Python
 
@@ -100,4 +114,24 @@ Lecture → Split into N units → Discuss Unit 1 → Discuss Unit 2 → ... →
 
 ---
 
-*All 7 lectures complete!*
+*Section 2 complete. Now on Section 3: Control Flow and Loops.*
+
+## Completed: Lecture 13 — If-Else Conditional Statements
+
+**File**: `03:Control Flow and Loops/If_Else_Conditionals.md`
+
+**Units covered**:
+1. The `if` Statement and Indentation — bytecode branching, `POP_JUMP_IF_FALSE`, indentation as block delimiter
+2. `else` — The Second Branch — two-way branching, `RETURN_VALUE` pattern
+3. `elif` Ladders — chained conditionals, short-circuit evaluation, jump chain bytecode
+
+## In Progress: Lecture 14 — Match Case Statements in Python
+
+**File**: `03:Control Flow and Loops/Match_Case.md`
+
+**Units covered so far**:
+1. The `match` Statement and Basic Pattern Matching — structural pattern matching vs jump table, bytecode mechanism (COPY, COMPARE_OP, POP_JUMP_IF_FALSE, RETURN_VALUE), subject evaluated once, first-match-wins, wildcard fallback
+
+**Units remaining**:
+2. Advanced Patterns — capture patterns, OR patterns, guards, sequence/mapping/class patterns
+3. Practical Examples & Edge Cases — real-world use cases, exhaustive matching, performance considerations
