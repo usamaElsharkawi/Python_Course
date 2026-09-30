@@ -53,7 +53,7 @@ Lecture → Split into N units → Discuss Unit 1 → Discuss Unit 2 → ... →
 | 13 | If-Else Conditional Statements | `03:Control Flow and Loops/If_Else_Conditionals.md` | ✅ Complete (3/3 units) |
 | 14 | Match Case Statements in Python | 4min | 🟡 Unit 1/3 Complete |
 | 15 | For Loops in Python | 8min | ✅ Complete (2/2 units) |
-| 16 | While Loops in Python | 7min | ⬜ Upcoming |
+| 16 | While Loops in Python | 7min | ✅ Complete (1/2 units) |
 | 17 | Break, Continue, and Pass Statements | 9min | ⬜ Upcoming |
 | — | Coding Exercise 3: Printing the table of 56 | — | ⬜ Upcoming |
 | 18 | Control Flow and Loops — Practice Set | 23min | ⬜ Upcoming |
@@ -135,6 +135,16 @@ Lecture → Split into N units → Discuss Unit 1 → Discuss Unit 2 → ... →
 **Units remaining**:
 2. Advanced Patterns — capture patterns, OR patterns, guards, sequence/mapping/class patterns
 3. Practical Examples & Edge Cases — real-world use cases, exhaustive matching, performance considerations
+
+## Completed: Lecture 16 — While Loops in Python
+
+**File**: `03:Control Flow and Loops/loops/While_Loops.md`
+
+**Units covered so far**:
+1. The `while` Loop — Condition-Checked Iteration — bytecode (`COMPARE_OP`, `POP_JUMP_IF_FALSE`, `JUMP_BACKWARD`), live condition re-evaluation, `while True` optimization to `NOP`, accidental infinite loops, when to use while vs for
+
+**Units remaining**:
+2. `break`, `continue`, `pass`, `else` clause on loops
 
 ## Completed: Lecture 15 — For Loops in Python
 
