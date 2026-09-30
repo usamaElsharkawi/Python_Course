@@ -191,3 +191,207 @@ else:
 ### Files Created
 - `break_continue.py` — transcript examples with bytecode
 - `pass_stmt.py` — pass statement bytecode
+---
+
+# Unit 2: Practical Patterns — Search, Validation, Retry, Nested Control
+
+---
+
+## 1. Search Loop — `break` + `else`
+
+```python
+items = ["apple", "banana", "cherry", "date"]
+target = "cherry"
+
+for item in items:
+    if item == target:
+        print(f"Found: {item}")
+        break
+else:
+    print("Not found")
+```
+
+**Why `else` on loop?** Runs only if loop *completed* without `break`. Cleaner than a `found` flag.
+
+---
+
+## 2. Input Validation — `while True` + `continue` + `break`
+
+```python
+while True:
+    age = input("Enter age (or 'q' to quit): ")
+    if age == 'q':
+        break
+    if not age.isdigit():
+        print("Please enter a number")
+        continue
+    age = int(age)
+    if age < 0 or age > 150:
+        print("Unrealistic age")
+        continue
+    print(f"Valid age: {age}")
+    break
+```
+
+**Pattern:** `while True` + `continue` for validation + `break` on success.
+
+---
+
+## 3. Retry Logic — `for` + `continue` + `else`
+
+```python
+import time
+
+max_retries = 3
+for attempt in range(1, max_retries + 1):
+    try:
+        result = risky_operation()
+        print("Success!")
+        break
+    except ConnectionError:
+        print(f"Attempt {attempt} failed")
+        if attempt < max_retries:
+            time.sleep(1)
+            continue
+else:
+    print("All retries exhausted")
+```
+
+**`else` on `for`** — runs only if all retries failed (no `break`).
+
+---
+
+## 4. Filter in Loop — `continue` as Guard
+
+```python
+numbers = [1, -2, 3, -4, 5, 0, 6]
+
+for n in numbers:
+    if n <= 0:
+        continue          # skip negatives and zero
+    print(f"Processing {n}")
+```
+
+Output:
+```
+Processing 1
+Processing 3
+Processing 5
+Processing 6
+```
+
+---
+
+## 5. Nested Loop Control — Breaking Outer Loop
+
+```python
+# Problem: break only exits inner loop
+for i in range(3):
+    for j in range(3):
+        if i == 1 and j == 1:
+            break        # Only breaks inner!
+    print(f"Outer: {i}")
+```
+
+**Solutions:**
+
+```python
+# Option 1: Flag variable
+found = False
+for i in range(3):
+    for j in range(3):
+        if i == 1 and j == 1:
+            found = True
+            break
+    if found:
+        break
+
+# Option 2: Function with return
+def search():
+    for i in range(3):
+        for j in range(3):
+            if i == 1 and j == 1:
+                return (i, j)
+
+# Option 3: Exception (rare but valid)
+class Found(Exception):
+    pass
+
+try:
+    for i in range(3):
+        for j in range(3):
+            if i == 1 and j == 1:
+                raise Found((i, j))
+except Found as e:
+    print(e.args[0])
+```
+
+---
+
+## 6. `pass` as Structural Placeholder
+
+```python
+# Skeleton code - implement later
+def process_user(user):
+    if user.is_admin:
+        pass  # TODO: admin logic
+    elif user.is_premium:
+        pass  # TODO: premium logic
+    else:
+        pass  # TODO: basic logic
+
+# Abstract base class
+class Animal:
+    def speak(self):
+        pass  # Subclasses must override
+```
+
+---
+
+## 7. Infinite Loop with `break` — Menu Pattern
+
+```python
+while True:
+    print("\n1. View\n2. Edit\n3. Quit")
+    choice = input("Choose: ")
+    
+    if choice == '1':
+        view_data()
+    elif choice == '2':
+        edit_data()
+    elif choice == '3':
+        break
+    else:
+        print("Invalid choice")
+```
+
+Clean, readable, standard Python pattern.
+
+---
+
+## Key Patterns Summary
+
+| Pattern | Keywords | Use Case |
+|---------|----------|----------|
+| Search + `else` | `break`, `else` | Find item, handle not-found |
+| Validation loop | `while True`, `continue`, `break` | Input sanitization |
+| Retry with `else` | `for`, `continue`, `break`, `else` | Network/IO retries |
+| Filter in loop | `continue` | Skip unwanted items |
+| Nested break | Flag / function / exception | Exit multiple levels |
+| Skeleton | `pass` | Placeholder for later |
+
+---
+
+## Key Takeaways (Unit 2)
+
+1. **`break` + `else`** — idiomatic search pattern, avoids flag variables
+2. **`while True` + `continue`** — standard validation loop
+3. **`for` + `else`** — retry logic, runs `else` only if no `break`
+4. **`continue` as guard clause** — filter early, reduce nesting
+5. **Nested `break`** — needs flag, function, or exception (no labeled break)
+6. **`pass` for scaffolding** — TODO markers, abstract methods
+
+---
+
+### Files Created (Unit 2)
+- `patterns.py` — all practical patterns above

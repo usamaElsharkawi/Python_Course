@@ -27,9 +27,9 @@ Each unit response should cover:
 ## Workflow
 
 ```
-Lecture → Split into N units → Discuss Unit 1 → Discuss Unit 2 → ... → Discuss Unit N
-                                                             ↓
-                                                   Create lecture .md file
+Lecture -> Split into N units -> Discuss Unit 1 -> Discuss Unit 2 -> ... -> Discuss Unit N
+                                                              |
+                                                    Create lecture .md file
 ```
 
 ## Section Schedule
@@ -54,7 +54,7 @@ Lecture → Split into N units → Discuss Unit 1 → Discuss Unit 2 → ... →
 | 14 | Match Case Statements in Python | 4min | 🟡 Unit 1/3 Complete |
 | 15 | For Loops in Python | 8min | ✅ Complete (2/2 units) |
 | 16 | While Loops in Python | 7min | ✅ Complete (1/2 units) |
-| 17 | Break, Continue, and Pass Statements | 9min | 🟡 Unit 1/2 Complete |
+| 17 | Break, Continue, and Pass Statements | 9min | ✅ Complete (2/2 units) |
 | — | Coding Exercise 3: Printing the table of 56 | — | ⬜ Upcoming |
 | 18 | Control Flow and Loops — Practice Set | 23min | ⬜ Upcoming |
 
@@ -136,16 +136,6 @@ Lecture → Split into N units → Discuss Unit 1 → Discuss Unit 2 → ... →
 2. Advanced Patterns — capture patterns, OR patterns, guards, sequence/mapping/class patterns
 3. Practical Examples & Edge Cases — real-world use cases, exhaustive matching, performance considerations
 
-## In Progress: Lecture 17 — Break, Continue, and Pass Statements
-
-**File**: `03:Control Flow and Loops/loops/Break_Continue_Pass.md`
-
-**Units covered so far**:
-1. Loop Control — `break`, `continue`, `pass` Internals — bytecode (`JUMP_FORWARD`, `JUMP_BACKWARD`, `NOP`), innermost-loop scope, `pass` as syntax filler, `else` clause on loops
-
-**Units remaining**:
-2. Practical Patterns — search loops, input validation, retry logic, nested loop control
-
 ## Completed: Lecture 15 — For Loops in Python
 
 **File**: `03:Control Flow and Loops/loops/For_Loops.md`
@@ -153,3 +143,21 @@ Lecture → Split into N units → Discuss Unit 1 → Discuss Unit 2 → ... →
 **Units covered**:
 1. The `for` Loop and `range()` — Iteration Protocol Internals — `GET_ITER`, `FOR_ITER`, `JUMP_BACKWARD` bytecode, lazy `range` object, iterator protocol (`__iter__`/`__next__`), `StopIteration` mechanism, off-by-one explained mathematically
 2. Iterating Over Sequences — lists, strings, tuples, dictionaries, sets; `enumerate()`, `zip()`; nested loops; mutation gotchas
+
+## Completed: Lecture 16 — While Loops in Python
+
+**File**: `03:Control Flow and Loops/loops/While_Loops.md`
+
+**Units covered so far**:
+1. The `while` Loop — Condition-Checked Iteration — bytecode (`COMPARE_OP`, `POP_JUMP_IF_FALSE`, `JUMP_BACKWARD`), live condition re-evaluation, `while True` optimization to `NOP`, accidental infinite loops, when to use while vs for
+
+**Units remaining**:
+2. `break`, `continue`, `pass`, `else` clause on loops
+
+## Completed: Lecture 17 — Break, Continue, and Pass Statements
+
+**File**: `03:Control Flow and Loops/loops/Break_Continue_Pass.md`
+
+**Units covered**:
+1. Loop Control — `break`, `continue`, `pass` Internals — bytecode (`JUMP_FORWARD`, `JUMP_BACKWARD`, `NOP`), innermost-loop scope, `pass` as syntax filler, `else` clause on loops
+2. Practical Patterns — search, validation, retry, nested loop control, pass scaffolding
