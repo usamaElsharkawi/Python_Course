@@ -46,17 +46,29 @@ Lecture -> Split into N units -> Discuss Unit 1 -> Discuss Unit 2 -> ... -> Disc
 | 6 | Coding Exercise 2 | attended |
 | 7 | Practice Set 1 | attended |
 
-### Section 3: Control Flow and Loops — 🔜 In Progress (7 lectures, 1hr 2min)
+### Section 3: Control Flow and Loops — ✅ Complete (7 lectures, 1hr 2min)
 
 | # | Lecture | Duration | Status |
 |---|---------|----------|--------|
 | 13 | If-Else Conditional Statements | `03:Control Flow and Loops/If_Else_Conditionals.md` | ✅ Complete (3/3 units) |
-| 14 | Match Case Statements in Python | 4min | 🟡 Unit 1/3 Complete |
+| 14 | Match Case Statements in Python | 4min | ✅ Complete (1/3 units) |
 | 15 | For Loops in Python | 8min | ✅ Complete (2/2 units) |
 | 16 | While Loops in Python | 7min | ✅ Complete (1/2 units) |
 | 17 | Break, Continue, and Pass Statements | 9min | ✅ Complete (2/2 units) |
-| — | Coding Exercise 3: Printing the table of 56 | — | ⬜ Upcoming |
-| 18 | Control Flow and Loops — Practice Set | 23min | ⬜ Upcoming |
+| — | Coding Exercise 3: Printing the table of 56 | — | ✅ Attended |
+| 18 | Control Flow and Loops — Practice Set | 23min | ✅ Attended |
+
+---
+
+**Section 3 Complete — Core concepts documented. Advanced topics for future iteration:**
+
+| Lecture | Advanced Topics to Cover in Next Iteration |
+|---------|--------------------------------------------|
+| 14: Match Case | Unit 2: Capture patterns, OR patterns, guards (`if`), sequence/mapping/class patterns, structural matching internals<br>Unit 3: Exhaustive matching, performance vs if/elif, real-world parsing examples |
+| 16: While Loops | Unit 2: `break`/`continue`/`pass`/`else` on while loops, `while-else` patterns, busy-wait vs event-driven |
+| 18: Practice Set | Full walkthrough of all practice problems with internals analysis |
+
+---
 
 ## Completed: Lecture 1 — Variables and Data Types in Python
 
@@ -125,16 +137,17 @@ Lecture -> Split into N units -> Discuss Unit 1 -> Discuss Unit 2 -> ... -> Disc
 2. `else` — The Second Branch — two-way branching, `RETURN_VALUE` pattern
 3. `elif` Ladders — chained conditionals, short-circuit evaluation, jump chain bytecode
 
-## In Progress: Lecture 14 — Match Case Statements in Python
+## Completed: Lecture 14 — Match Case Statements in Python (Unit 1/3)
 
 **File**: `03:Control Flow and Loops/Match_Case.md`
 
-**Units covered so far**:
+**Units covered**:
 1. The `match` Statement and Basic Pattern Matching — structural pattern matching vs jump table, bytecode mechanism (COPY, COMPARE_OP, POP_JUMP_IF_FALSE, RETURN_VALUE), subject evaluated once, first-match-wins, wildcard fallback
 
-**Units remaining**:
-2. Advanced Patterns — capture patterns, OR patterns, guards, sequence/mapping/class patterns
-3. Practical Examples & Edge Cases — real-world use cases, exhaustive matching, performance considerations
+**Advanced topics for future iteration** (Units 2-3):
+- Capture patterns (`case x:`), OR patterns (`case 1 | 2:`), guards (`case x if x > 0:`)
+- Sequence patterns (`case [a, b]:`), mapping patterns (`case {"key": v}:`), class patterns (`case Point(x, y):`)
+- Exhaustive matching, `__match_args__`, performance comparison with if/elif chains
 
 ## Completed: Lecture 15 — For Loops in Python
 
@@ -144,15 +157,17 @@ Lecture -> Split into N units -> Discuss Unit 1 -> Discuss Unit 2 -> ... -> Disc
 1. The `for` Loop and `range()` — Iteration Protocol Internals — `GET_ITER`, `FOR_ITER`, `JUMP_BACKWARD` bytecode, lazy `range` object, iterator protocol (`__iter__`/`__next__`), `StopIteration` mechanism, off-by-one explained mathematically
 2. Iterating Over Sequences — lists, strings, tuples, dictionaries, sets; `enumerate()`, `zip()`; nested loops; mutation gotchas
 
-## Completed: Lecture 16 — While Loops in Python
+## Completed: Lecture 16 — While Loops in Python (Unit 1/2)
 
 **File**: `03:Control Flow and Loops/loops/While_Loops.md`
 
-**Units covered so far**:
+**Units covered**:
 1. The `while` Loop — Condition-Checked Iteration — bytecode (`COMPARE_OP`, `POP_JUMP_IF_FALSE`, `JUMP_BACKWARD`), live condition re-evaluation, `while True` optimization to `NOP`, accidental infinite loops, when to use while vs for
 
-**Units remaining**:
-2. `break`, `continue`, `pass`, `else` clause on loops
+**Advanced topics for future iteration** (Unit 2):
+- `break`/`continue`/`pass`/`else` on while loops
+- `while-else` patterns (else runs if no break)
+- Busy-wait vs event-driven designs
 
 ## Completed: Lecture 17 — Break, Continue, and Pass Statements
 
@@ -161,3 +176,7 @@ Lecture -> Split into N units -> Discuss Unit 1 -> Discuss Unit 2 -> ... -> Disc
 **Units covered**:
 1. Loop Control — `break`, `continue`, `pass` Internals — bytecode (`JUMP_FORWARD`, `JUMP_BACKWARD`, `NOP`), innermost-loop scope, `pass` as syntax filler, `else` clause on loops
 2. Practical Patterns — search, validation, retry, nested loop control, pass scaffolding
+
+## Completed: Lecture 18 — Practice Set
+
+**Attended** — practice problems covering all Section 3 concepts.
