@@ -52,7 +52,7 @@ Lecture → Split into N units → Discuss Unit 1 → Discuss Unit 2 → ... →
 |---|---------|----------|--------|
 | 13 | If-Else Conditional Statements | `03:Control Flow and Loops/If_Else_Conditionals.md` | ✅ Complete (3/3 units) |
 | 14 | Match Case Statements in Python | 4min | 🟡 Unit 1/3 Complete |
-| 15 | For Loops in Python | 8min | 🟡 Unit 1/2 Complete |
+| 15 | For Loops in Python | 8min | ✅ Complete (2/2 units) |
 | 16 | While Loops in Python | 7min | ⬜ Upcoming |
 | 17 | Break, Continue, and Pass Statements | 9min | ⬜ Upcoming |
 | — | Coding Exercise 3: Printing the table of 56 | — | ⬜ Upcoming |
@@ -138,10 +138,8 @@ Lecture → Split into N units → Discuss Unit 1 → Discuss Unit 2 → ... →
 
 ## Completed: Lecture 15 — For Loops in Python
 
-**File**: `03:Control Flow and Loops/For_Loops.md`
+**File**: `03:Control Flow and Loops/loops/For_Loops.md`
 
-**Units covered so far**:
+**Units covered**:
 1. The `for` Loop and `range()` — Iteration Protocol Internals — `GET_ITER`, `FOR_ITER`, `JUMP_BACKWARD` bytecode, lazy `range` object, iterator protocol (`__iter__`/`__next__`), `StopIteration` mechanism, off-by-one explained mathematically
-
-**Units remaining**:
-2. Iterating Over Sequences — lists, strings, tuples, dictionaries, sets; `enumerate()`, `zip()`; nested loops
+2. Iterating Over Sequences — lists, strings, tuples, dictionaries, sets; `enumerate()`, `zip()`; nested loops; mutation gotchas
