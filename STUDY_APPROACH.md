@@ -180,3 +180,62 @@ Lecture -> Split into N units -> Discuss Unit 1 -> Discuss Unit 2 -> ... -> Disc
 ## Completed: Lecture 18 — Practice Set
 
 **Attended** — practice problems covering all Section 3 concepts.
+
+---
+
+### Section 4: Strings — ✅ Complete (3 lectures documented)
+
+| # | Lecture | File | Status |
+|---|---------|------|--------|
+| 19 | Strings in Python | `04:Strings/Lecture_19_Strings_in_Python.md` | ✅ Complete (3/3 units) |
+| 20 | String Slicing and Indexing | `04:Strings/Lecture_20_String_Slicing_and_Indexing.md` | ✅ Complete (3/3 units) |
+| 21 | String Methods and Functions | `04:Strings/Lecture_21_String_Methods_and_Functions.md` | ✅ Complete (6/6 units) |
+| 22 | String Formatting and f-Strings | `04:Strings/Lecture_22_String_Formatting_and_f_Strings.md` | ✅ Complete (4/4 units) |
+| — | Quiz 2: Strings | — | ✅ Attended |
+| — | Coding Exercise 4: String Manipulation | — | ✅ Attended |
+| — | Role Play 2: Your Python Interview | — | ✅ Attended |
+| 23 | Strings — Practice Set | — | ✅ Attended |
+
+---
+
+*Section 4 complete. Now on Section 5.*
+
+## Completed: Lecture 19 — Strings in Python
+
+**File**: `04:Strings/Lecture_19_Strings_in_Python.md`
+
+**Units covered**:
+1. String creation and representation — single/double/triple quotes, compact vs Unicode representation, docstring/comment behavior
+2. Positive indexing and IndexError — zero-based indexing, bytecode `BINARY_SUBSCR`, O(1) random access
+3. Negative indices and conversion math — `len + negative` normalization, C-level implementation, zero overhead
+
+## Completed: Lecture 20 — String Slicing and Indexing
+
+**File**: `04:Strings/Lecture_20_String_Slicing_and_Indexing.md`
+
+**Units covered**:
+1. Basic slicing syntax (`s[start:end]`) — exclusive end, slice object semantics, bytecode, default values
+2. Negative indices in slicing — C-level normalization, mathematical model, common pitfalls
+3. Step slicing (`s[start:end:step]`) — `n-1` skip rule, omitting indices defaults, reverse traversal
+
+## Completed: Lecture 21 — String Methods and Functions
+
+**File**: `04:Strings/Lecture_21_String_Methods_and_Functions.md`
+
+**Units covered**:
+1. String immutability — `TypeError` on item assignment, new object creation, memory safety
+2. `len()` and case methods — O(1) length, `upper()`, `lower()`, `capitalize()`, `title()`
+3. Whitespace stripping methods — `strip()`, `lstrip()`, `rstrip()`, Unicode whitespace handling
+4. Search and replace (`find`, `replace`) — substring search, global replacement, `find` vs `index`
+5. Split and join — `split(sep)` tokenization, `join()` efficient concatenation
+6. Boolean checking methods — `isalpha()`, `isdigit()`, `isalnum()`, `isspace()`
+
+## Completed: Lecture 22 — String Formatting and f-Strings
+
+**File**: `04:Strings/Lecture_22_String_Formatting_and_f_Strings.md`
+
+**Units covered**:
+1. Why formatting exists: the template problem — `.format()` method, positional placeholders
+2. f-strings: inline expression formatting — `f"{var}"` syntax, bytecode (`FORMAT_VALUE`, `BUILD_STRING`), performance
+3. Character encoding: `ord()` and `chr()` — Unicode code points, ASCII vs Unicode
+4. Summary: string functions covered in this section — reference table of all methods
