@@ -239,3 +239,48 @@ Lecture -> Split into N units -> Discuss Unit 1 -> Discuss Unit 2 -> ... -> Disc
 2. f-strings: inline expression formatting — `f"{var}"` syntax, bytecode (`FORMAT_VALUE`, `BUILD_STRING`), performance
 3. Character encoding: `ord()` and `chr()` — Unicode code points, ASCII vs Unicode
 4. Summary: string functions covered in this section — reference table of all methods
+
+---
+
+### Section 5: Functions and Modules — ✅ In Progress (3/7 lectures)
+
+| # | Lecture | Duration | Status |
+|---|---------|----------|--------|
+| 24 | Defining Functions in Python | 11 min | ✅ Complete (4 units) |
+| 25 | Function Arguments & Return Values | 5 min | ✅ Complete (5 units) |
+| 26 | Lambda Functions in Python | 3 min | ✅ Complete (2 units) |
+| 27 | Recursion in Python | 13 min | ⏳ Pending |
+| 28 | Modules and Pip — Using External Libraries | 12 min | ⏳ Pending |
+| 29 | Variable Scope and Docstrings | 15 min | ⏳ Pending |
+| 30 | Functions & Modules — Practice Set | 18 min | ⏳ Pending |
+
+---
+
+## Completed: Lecture 24 — Defining Functions in Python
+
+**File**: `05:Functions and Modules/Lecture_24_Defining_Functions_in_Python.md`
+
+**Units covered**:
+1. Why functions exist: DRY principle and maintainability
+2. Function definition syntax (`def`, parameters, body) — bytecode, call protocol
+3. Reserved keywords and naming rules
+4. `return` semantics and the function call protocol
+
+## Completed: Lecture 25 — Function Arguments and Return Values
+
+**File**: `05:Functions and Modules/Lecture_25_Function_Arguments_and_Return_Values.md`
+
+**Units covered**:
+1. Parameters vs arguments — distinction, binding process, call stack
+2. Positional arguments — left-to-right binding, order sensitivity
+3. Default arguments — optional parameters, mutable default pitfall
+4. Keyword arguments — `param=value` syntax, any order, mixing rules
+5. Variable-length arguments (`*args` tuple, `**kwargs` dict)
+
+## Completed: Lecture 26 — Lambda Functions in Python
+
+**File**: `05:Functions and Modules/Lecture_26_Lambda_Functions.md`
+
+**Units covered**:
+1. Lambda syntax and basic usage — `lambda x: expr`, implicit return, multi-argument
+2. Equivalence with `def` and use cases — higher-order functions, convenience for short callbacks
