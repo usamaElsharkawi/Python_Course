@@ -8,3 +8,4 @@ name = "usama mohamed"
 # print(name[3])
 
 print(name[0:-1])
+
