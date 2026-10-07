@@ -252,7 +252,7 @@ Lecture -> Split into N units -> Discuss Unit 1 -> Discuss Unit 2 -> ... -> Disc
 | 27 | Recursion in Python | 13 min | ✅ Complete (3 units) |
 | 28 | Modules and Pip — Using External Libraries | 12 min | ✅ Complete (4 units) |
 | 29 | Variable Scope and Docstrings | 15 min | ✅ Complete (3 units) |
-| 30 | Functions & Modules — Practice Set | 18 min | ⏳ Pending |
+| 30 | Functions & Modules — Practice Set | 18 min | ⏭️ Skipped |
 
 ---
 
