@@ -251,7 +251,7 @@ Lecture -> Split into N units -> Discuss Unit 1 -> Discuss Unit 2 -> ... -> Disc
 | 26 | Lambda Functions in Python | 3 min | ✅ Complete (2 units) |
 | 27 | Recursion in Python | 13 min | ✅ Complete (3 units) |
 | 28 | Modules and Pip — Using External Libraries | 12 min | ✅ Complete (4 units) |
-| 29 | Variable Scope and Docstrings | 15 min | ⏳ Pending |
+| 29 | Variable Scope and Docstrings | 15 min | ✅ Complete (3 units) |
 | 30 | Functions & Modules — Practice Set | 18 min | ⏳ Pending |
 
 ---
@@ -303,3 +303,12 @@ Lecture -> Split into N units -> Discuss Unit 1 -> Discuss Unit 2 -> ... -> Disc
 2. Built-in modules: math, os, json, and the Python Module Index — standard library, VSCode unused detection
 3. Creating and importing your own modules — local files as modules, import vs from-import, IntelliSense
 4. External modules, pip, and dependency management — PyPI, site-packages, dependency resolution, versioning
+
+## Completed: Lecture 29 — Variable Scope and Docstrings
+
+**File**: `05:Functions and Modules/Lecture_29_Variable_Scope_and_Docstrings.md`
+
+**Units covered**:
+1. Scope and lifetime of variables — local vs global, LEGB rule, frame destruction
+2. The `global` keyword — modifying module state from functions, binding semantics
+3. Docstrings — `__doc__` attribute, runtime introspection, PEP 257 conventions
