@@ -250,7 +250,7 @@ Lecture -> Split into N units -> Discuss Unit 1 -> Discuss Unit 2 -> ... -> Disc
 | 25 | Function Arguments & Return Values | 5 min | ✅ Complete (5 units) |
 | 26 | Lambda Functions in Python | 3 min | ✅ Complete (2 units) |
 | 27 | Recursion in Python | 13 min | ✅ Complete (3 units) |
-| 28 | Modules and Pip — Using External Libraries | 12 min | ⏳ Pending |
+| 28 | Modules and Pip — Using External Libraries | 12 min | ✅ Complete (4 units) |
 | 29 | Variable Scope and Docstrings | 15 min | ⏳ Pending |
 | 30 | Functions & Modules — Practice Set | 18 min | ⏳ Pending |
 
@@ -293,3 +293,13 @@ Lecture -> Split into N units -> Discuss Unit 1 -> Discuss Unit 2 -> ... -> Disc
 1. Recursion definition and base case — self-referential calls, base case, CPython call stack
 2. How recursion works: breakdown and resolution — call tree trace, frame stacking, result bubbling
 3. Importance and risks — stack overflow, tree traversal, memoization, iterative alternatives
+
+## Completed: Lecture 28 — Modules and Pip: Using External Libraries
+
+**File**: `05:Functions and Modules/Lecture_28_Modules_and_Pip.md`
+
+**Units covered**:
+1. What are modules: import and basic usage — module objects, import semantics, sys.modules caching
+2. Built-in modules: math, os, json, and the Python Module Index — standard library, VSCode unused detection
+3. Creating and importing your own modules — local files as modules, import vs from-import, IntelliSense
+4. External modules, pip, and dependency management — PyPI, site-packages, dependency resolution, versioning
