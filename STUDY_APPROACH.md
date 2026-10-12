@@ -242,6 +242,30 @@ Lecture -> Split into N units -> Discuss Unit 1 -> Discuss Unit 2 -> ... -> Disc
 
 ---
 
+### Section 6: Data Structures — 🔄 In Progress (1/6 lectures)
+
+| # | Lecture | Duration | Status |
+|---|---------|----------|--------|
+| 31 | Introduction to Lists | 7 min | ✅ Complete (3/3 units) — `Section 6: Data Structures in Python/Lecture_31_Introduction_to_Lists.md` |
+| 32 | List Methods | 9 min | ⬜ Not started |
+| 33 | Tuples and Operations on Tuples | 8 min | ⬜ Not started |
+| 34 | Sets and Set Methods | 9 min | ⬜ Not started |
+| 35 | Dictionaries and Dictionary Methods | 9 min | ⬜ Not started |
+| 36 | Data Structures — Practice Set | 16 min | ⬜ Not started |
+
+---
+
+## Completed: Lecture 31 — Introduction to Lists
+
+**File**: `Section 6: Data Structures in Python/Lecture_31_Introduction_to_Lists.md`
+
+**Units covered**:
+1. Why data structures exist & what a list really is — data structures for storing/processing data, square-bracket creation, Python 3.14 bytecode (`BUILD_LIST` + `LIST_EXTEND`, constants as tuples), `PyListObject` as contiguous pointer array, mixed-type lists legal, ordered/mutable definition
+2. Indexing, slicing, and `IndexError` — 3.14 `BINARY_OP 26 ([])` subscript, `list_subscript` C path, O(1) pointer arithmetic, `IndexError` (LookupError subclass) vs clipped slice bounds, shallow slice results
+3. Mutability vs string immutability — `STORE_SUBSCR` slot rewrite, identity stability, refcount bookkeeping, `TypeError` on str item assignment, unhashability of lists, aliasing (`b = a`), in-place `+=` propagating through aliases, mutators returning `None`
+
+---
+
 ### Section 5: Functions and Modules — ✅ In Progress (3/7 lectures)
 
 | # | Lecture | Duration | Status |
