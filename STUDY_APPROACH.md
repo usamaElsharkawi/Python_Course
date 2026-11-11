@@ -391,3 +391,21 @@ trap recurred from Section 5). Next session: targeted gap review +
 | 43 | OOP — Practice Set | 5 min | ⬜ Not started |
 
 All code examples consolidated in `Section 7: Object-Oriented Programming in Python/classes.py`.
+
+---
+
+### Section 8: Advanced Python Concepts — 🔄 In Progress (1/9 lectures)
+
+| # | Lecture | Duration | Status |
+|---|---------|----------|--------|
+| 44 | Decorators in Python | — | ✅ Complete (4/4 units) — `Section 8: Advanced Python Concepts/Lecture_44_Decorators.md` |
+| 45 | Getters and Setters | — | ✅ Complete (5/5 units) — `Section 8: Advanced Python Concepts/Lecture_45_Getters_and_Setters.md` |
+| 46 | Static & Class Methods | — | ✅ Complete (4/4 units) — `Section 8: Advanced Python Concepts/Lecture_46_Static_and_Class_Methods.md` |
+| 47 | Magic/Dunder Methods | — | ✅ Complete (3/3 units) — `Section 8: Advanced Python Concepts/Lecture_47_Dunder_Methods.md` |
+| 48 | Exception Handling and Custom Errors | — | ✅ Complete (5/5 units) — `Section 8: Advanced Python Concepts/Lecture_48_Exception_Handling_and_Custom_Errors.md` |
+| 49 | Map filter and reduce | — | ✅ Complete (4/4 units) — `Section 8: Advanced Python Concepts/Lecture_49_Map_Filter_and_Reduce.md` |
+| 50 | Walrus operator | — | ✅ Complete (4/4 units) — `Section 8: Advanced Python Concepts/Lecture_50_Walrus_Operator.md` |
+| 51 | Args and kwargs | — | ✅ Complete (3/3 units) — `Section 8: Advanced Python Concepts/Lecture_51_Args_and_Kwargs.md` |
+| 52 | Python Advanced Concepts - Practice Set | — | ⬜ Not started |
+
+All code examples consolidated in `Section 8: Advanced Python Concepts/decorators.py`.
