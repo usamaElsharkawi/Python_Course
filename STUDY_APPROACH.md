@@ -242,16 +242,24 @@ Lecture -> Split into N units -> Discuss Unit 1 -> Discuss Unit 2 -> ... -> Disc
 
 ---
 
-### Section 6: Data Structures — 🔄 In Progress (1/6 lectures)
+### Section 6: Data Structures — 🔄 In Progress (5/6 lectures)
 
 | # | Lecture | Duration | Status |
 |---|---------|----------|--------|
 | 31 | Introduction to Lists | 7 min | ✅ Complete (3/3 units) — `Section 6: Data Structures in Python/Lecture_31_Introduction_to_Lists.md` |
-| 32 | List Methods | 9 min | ⬜ Not started |
-| 33 | Tuples and Operations on Tuples | 8 min | ⬜ Not started |
-| 34 | Sets and Set Methods | 9 min | ⬜ Not started |
-| 35 | Dictionaries and Dictionary Methods | 9 min | ⬜ Not started |
+| 32 | List Methods | 9 min | ✅ Complete (4/4 units) — `Section 6: Data Structures in Python/Lecture_32_List_Methods.md` |
+| 33 | Tuples and Operations on Tuples | 8 min | ✅ Complete (2/4 units) — `Section 6: Data Structures in Python/Lecture_33_Tuples.md` |
+| 34 | Sets and Set Methods | 9 min | ✅ Complete (4/4 units) — `Section 6: Data Structures in Python/Lecture_34_Sets.md` |
+| 35 | Dictionaries and Dictionary Methods | 9 min | ✅ Complete (5/5 units) — `Section 6: Data Structures in Python/Lecture_35_Dictionaries.md` |
 | 36 | Data Structures — Practice Set | 16 min | ⬜ Not started |
+
+---
+
+**Section 6 Quiz — 40/50 (80%)** — Lists 13/15, Tuples 6/8, Sets 5/9,
+Dicts 9/10, Mixed 7/8. Gaps documented in
+`NEXT_SESSION_REVIEW_PLAN.md` (set fundamentals weakest; mutable-default
+trap recurred from Section 5). Next session: targeted gap review +
+**100-question full-course quiz** (Sections 2–6, all lectures).
 
 ---
 
@@ -263,6 +271,37 @@ Lecture -> Split into N units -> Discuss Unit 1 -> Discuss Unit 2 -> ... -> Disc
 1. Why data structures exist & what a list really is — data structures for storing/processing data, square-bracket creation, Python 3.14 bytecode (`BUILD_LIST` + `LIST_EXTEND`, constants as tuples), `PyListObject` as contiguous pointer array, mixed-type lists legal, ordered/mutable definition
 2. Indexing, slicing, and `IndexError` — 3.14 `BINARY_OP 26 ([])` subscript, `list_subscript` C path, O(1) pointer arithmetic, `IndexError` (LookupError subclass) vs clipped slice bounds, shallow slice results
 3. Mutability vs string immutability — `STORE_SUBSCR` slot rewrite, identity stability, refcount bookkeeping, `TypeError` on str item assignment, unhashability of lists, aliasing (`b = a`), in-place `+=` propagating through aliases, mutators returning `None`
+
+## Completed: Lecture 32 — List Methods
+
+**File**: `Section 6: Data Structures in Python/Lecture_32_List_Methods.md`
+
+**Units covered**:
+1. The "grow" family: `append`, `insert`, `extend` — over-allocation growth formula, amortized O(1) append, `memmove`-based O(n) insert, `extend` iterator protocol + length hint, `+=` ≡ in-place extend, append-vs-extend nesting trap
+2. The removers: `pop`, `remove` — ownership-transfer return value, empty/bounds `IndexError`, `remove` by `==` value (O(n) scan + shift, `ValueError` not found), lecture's index/value mislabeling corrected, `del` as third path, bool/int equality trap
+3. `sort` and `reverse` — TimSort (runs + binary insertion + stack merges), stability, O(n) on pre-sorted data, `key=` decorate-sort-undecorate cost model, `reverse=True` single-pass, pointer-swap `reverse()` vs lazy `reversed()`, `sorted()` = copy + sort
+4. List comprehensions — PEP 709 inlining, scoped loop variable (no Py2 leak), `LIST_APPEND` performance (~25% faster than append loop), filter vs conditional expression, one-expression limit, nesting mirrors loops, eager (not lazy) building
+
+## Completed: Lecture 34 — Sets and Set Methods
+
+**File**: `Section 6: Data Structures in Python/Lecture_34_Sets.md`
+
+**Units covered**:
+1. What sets are & creation — unordered unique collections, curly-brace syntax, `BUILD_SET` + frozenset constant + `SET_UPDATE` bytecode, `{}` is dict not set, dedup at hash-table level, hashability requirement
+2. Set methods — `add` (no-op on dup), `remove` (KeyError — dict-family exception), `discard` (silent), `pop` (arbitrary slot-0 element); no insert/append/sort because no positions exist
+3. Set operations — union, intersection, difference, symmetric difference, subset/superset; operator vs method form (methods accept any iterable), `|=`/`&=` in-place aliasing, `&` iterates smaller set
+4. Hash table internals — slot = `hash(e) & mask`, open addressing with linear probes + perturb, O(1) membership vs O(n) list, slot order = hash order, `PYTHONHASHSEED` randomization per process, `pop` = first occupied slot, `1 == 1.0 == True` unification, `frozenset` as hashable immutable sibling
+
+## Completed: Lecture 35 — Dictionaries and Dictionary Methods
+
+**File**: `Section 6: Data Structures in Python/Lecture_35_Dictionaries.md`
+
+**Units covered**:
+1. What dictionaries are & fast lookup — key-value pairs, `BUILD_MAP` bytecode, dict = set's hash table + value column, insertion-ordered (3.7+), compact layout (indices + entries arrays)
+2. Keys, values & hashability — keys must be hashable (mutable keys corrupt the table), tuple keys conditional, values unrestricted, `1 == True` key unification, `KeyError` names the offending key
+3. Mutation via assignment — `=` as insert-or-update (no separate insert method), `STORE_SUBSCR` with hash probing, nested mutable values allowed, keys pinned
+4. Methods — `keys`/`values`/`items` live views (not lists), `pop` (returns value), `popitem` LIFO, `clear`, `get` (non-raising), `setdefault` (grouping idiom), view set-ops, `items()` enables tuple unpacking
+5. Dict comprehensions & structure selection — `{k: v for ...}` → `BUILD_MAP`/`MAP_ADD`, last-duplicate-wins, when-to-use-which decision table (list/tuple/set/dict), dict lookup vs list iteration
 
 ---
 
@@ -336,3 +375,19 @@ Lecture -> Split into N units -> Discuss Unit 1 -> Discuss Unit 2 -> ... -> Disc
 1. Scope and lifetime of variables — local vs global, LEGB rule, frame destruction
 2. The `global` keyword — modifying module state from functions, binding semantics
 3. Docstrings — `__doc__` attribute, runtime introspection, PEP 257 conventions
+
+---
+
+### Section 7: Object-Oriented Programming in Python — ✅ Complete (6/6 lectures)
+
+| # | Lecture | Duration | Status |
+|---|---------|----------|--------|
+| 37 | Introduction to OOP | 7 min | ✅ Complete (3/3 units) — `Section 7: Object-Oriented Programming in Python/Lecture_37_Introduction_to_OOP.md` |
+| 38 | Classes and Objects in Python | 9 min | ✅ Complete (3/3 units) — `Section 7: Object-Oriented Programming in Python/Lecture_38_Classes_and_Objects.md` |
+| 39 | Constructors in Python | 5 min | ✅ Complete (3/3 units) — `Section 7: Object-Oriented Programming in Python/Lecture_39_Constructors.md` |
+| 40 | Instance and Class Attributes | 5 min | ✅ Complete (3/3 units) — `Section 7: Object-Oriented Programming in Python/Lecture_40_Instance_and_Class_Attributes.md` |
+| 41 | Inheritance and Polymorphism | 6 min | ✅ Complete (3/3 units) — `Section 7: Object-Oriented Programming in Python/Lecture_41_Inheritance_and_Polymorphism.md` |
+| 42 | Method Overriding and Operator Overloading | 5 min | ✅ Complete (3/3 units) — `Section 7: Object-Oriented Programming in Python/Lecture_42_Method_Overriding_and_Operator_Overloading.md` |
+| 43 | OOP — Practice Set | 5 min | ⬜ Not started |
+
+All code examples consolidated in `Section 7: Object-Oriented Programming in Python/classes.py`.
